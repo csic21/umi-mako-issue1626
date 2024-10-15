@@ -1,5 +1,5 @@
 import { PageContainer } from '@ant-design/pro-components';
-import { FormattedMessage } from '@umijs/max';
+import { FormattedMessage, KeepAlive } from '@umijs/max';
 import type { TableProps } from 'antd';
 import { Space, Table, Tag } from 'antd';
 import React from 'react';
@@ -94,4 +94,8 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default () => (
+  <KeepAlive>
+    <HomePage />
+  </KeepAlive>
+);

@@ -9,6 +9,8 @@ export default defineConfig({
   layout: {
     title: '@umijs/max',
   },
+  mfsu: false,
+  plugins: [require.resolve('umi-plugin-keep-alive')],
   routes: [
     {
       path: '/',
